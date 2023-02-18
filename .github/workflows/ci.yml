@@ -10,9 +10,9 @@ jobs:
       - name: Caching dependency
         uses: actions/cache@v2
         with:
-          path:
-          ~/.cache
-          ~/.npm
+          path: |
+            ~/.cache
+            ~/.npm
           key: dependencies-v1-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: install dependencies
