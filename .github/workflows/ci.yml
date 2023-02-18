@@ -13,7 +13,7 @@ jobs:
           path: |
             ~/.cache
             ~/.npm
-          key: dependencies-v1-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          key: dependencies-v2-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: install dependencies
         run: npm ci
