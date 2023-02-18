@@ -1,0 +1,20 @@
+name: ci
+on: [push]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: Build APP
+        run: npm run build
+
+      - name: Start the app
+        run: npm start &
+
+      - name: cypress tests execute
+        run: npm run cy:run

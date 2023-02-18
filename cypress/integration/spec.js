@@ -21,4 +21,9 @@ describe('Example site', () => {
     cy.visit('/README/')
     cy.contains('h2', 'README')
   })
+
+  afterEach(() => {
+    //wait for finished video redering
+    cy.wait(1000)
+  })
 })
