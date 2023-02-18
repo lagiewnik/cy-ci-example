@@ -7,13 +7,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.3.0
 
-      - name: Caching dependency
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.cache
-            ~/.npm
-          key: dependencies-v1-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+      # - name: Caching dependency
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: |
+      #       ~/.cache
+      #       ~/.npm
+      #     key: dependencies-v1-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: install dependencies
         run: npm ci
