@@ -1,4 +1,5 @@
-# cypress-workshop-ci-example
+# cypress-workshop-ci-example [![ci](https://github.com/lagiewnik/cy-ci-example/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/lagiewnik/cy-ci-example/actions/workflows/ci.yml)
+
 > A simple example app to be used during [bahmutov/cypress-workshop-ci](https://github.com/bahmutov/cypress-workshop-ci) session
 
 ## README
