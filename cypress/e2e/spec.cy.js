@@ -14,7 +14,7 @@ describe('Example site', () => {
 
   it('goes directly to README', () => {
     cy.visit('/README')
-    cy.contains('h2', 'README')
+    cy.contains('h2', 'README_ZZZ')
   })
 
   it('redirects to README/', () => {
