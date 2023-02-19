@@ -21,11 +21,13 @@ jobs:
       - name: Build APP
         run: npm run build
 
-      - name: Start the app
-        run: npm start &
+      - name: Starting App and run E2E tests
+        run: npm run e2e
+      # - name: Start the app
+      #   run: npm start &
 
-      - name: Wait for site url
-        run: npx wait-on http://localhost:8080
+      # - name: Wait for site url
+      #   run: npx wait-on http://localhost:8080
 
-      - name: cypress tests execute
-        run: npm run cy:run
+      # - name: cypress tests execute
+      #   run: npm run cy:run
