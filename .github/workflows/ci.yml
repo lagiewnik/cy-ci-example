@@ -32,8 +32,8 @@ jobs:
           name: test-artifacts # optional, default is artifact
           # A file, directory or wildcard pattern that describes what to upload
           path: 
-            /home/runner/work/cy-ci-example/cy-ci-example/cypress/videos/
-            /home/runner/work/cy-ci-example/cy-ci-example/cypress/screenshots/
+            ./cypress/videos/
+            ./cypress/screenshots/
           # The desired behavior if no files are found using the provided path.
       # - name: Start the app
       #   run: npm start &
