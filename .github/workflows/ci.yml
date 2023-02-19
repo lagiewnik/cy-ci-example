@@ -24,5 +24,8 @@ jobs:
       - name: Start the app
         run: npm start &
 
+      - name: Wait for site url
+        run: npx wait-on http://localhost:8080
+
       - name: cypress tests execute
         run: npm run cy:run
