@@ -21,18 +21,27 @@ jobs:
       - name: Build APP
         run: npm run build
 
-      - name: Starting App and run E2E tests
-        run: npm run e2e
-        
+      # - name: Starting App and run E2E tests
+      #   run: npm run e2e
+
+      - name: Start the app
+        run: npm start &
+
+      - name: Wait for site url
+        run: npx wait-on http://localhost:8080
+
+      - name: cypress tests execute
+        run: npm run cy:run -- --record
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       - name: Download screenshots and videos folder
-        uses: actions/upload-artifact@v3.1.2 
+        uses: actions/upload-artifact@v3.1.2
         if: always()
         with:
-    # Artifact name
+          # Artifact name
           name: test-artifacts # optional, default is artifact
           # A file, directory or wildcard pattern that describes what to upload
-          path: 
-            ./cypress/
+          path: ./cypress/
           # The desired behavior if no files are found using the provided path.
       # - name: Start the app
       #   run: npm start &
