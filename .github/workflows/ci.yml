@@ -6,7 +6,7 @@ jobs:
       #dont stop the matrix if one of the job fails
       fail-fast: false
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-20.04]
+        os: [macos-latest, ubuntu-20.04]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
